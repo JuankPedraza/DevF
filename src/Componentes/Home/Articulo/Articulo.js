@@ -18,7 +18,7 @@ function Articulo() {
       .then((data) => {
         setproductoDetalle(data);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div>

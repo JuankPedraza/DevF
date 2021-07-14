@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function useFiltro(productos = [], terminoBusqueda) {
   const [productoFiltrado, setproductoFiltrado] = useState([]);
   useEffect(() => {
-    if (productos.length != 0) {
+    if (productos.length !== 0) {
       const filtrados = productos.filter((producto) =>
         producto.product_name.includes(terminoBusqueda)
       );

@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../../../Contexts/Auth/Auth";
+import React from "react";
 import { Link } from "react-router-dom";
 import './Register.css';
 
 function Register() {
-  const { session, user } = useContext(AuthContext);
 
   return (
     <div>

@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../../../Contexts/Auth/Auth";
+import React from "react";
 import './Slider.css';
 
 function Slider(props) {
-  const { user, session } = useContext(AuthContext);
 
   return (
     <header className="header-2">

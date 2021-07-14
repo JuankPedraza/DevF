@@ -1,0 +1,100 @@
+.container-form-login {
+  background-color: rgb(233, 233, 233);
+  width: 400px;
+  height: 370px;
+  margin: 250px 100px 100px 800px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+}
+
+.container-form-login-center {
+  width: 75%;
+  margin: 0px auto;
+}
+
+.container-form-login-logo {
+  width: 30%;
+  font-size: 30px;
+  float: left;
+  margin-top: 35px;
+}
+
+.container-form-login-logo img {
+  display: block;
+  float: left;
+  height: 60px;
+  margin-top: -9px;
+  margin-left: 85px;
+}
+
+.container-form-login-title {
+  display: block;
+  margin: 0px;
+  float: left;
+  margin-left: 40px;
+  margin-bottom: 50px;
+}
+
+.container-form-login input[type="text"] {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.container-form-login input[type="password"] {
+  width: 302px;
+  height: 32px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.container-form-login-register-link {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: rgba(73, 155, 234, 1);
+}
+
+.container-form-login-button-login {
+  cursor: pointer;
+  margin-left: 46px;
+  margin-top: 5px;
+  width: 308px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(73, 155, 234, 1);
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.container-form-login-google {
+  background-color: rgb(233, 233, 233);
+  width: 400px;
+  height: 70px;
+  border: none;
+  border-radius: 9px;
+  margin-left: 800px;
+  margin-top: -120px;
+}
+
+.container-form-login-google-button-login {
+  margin-left: 0px;
+  margin-top: 5px;
+  width: 308px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(73, 155, 234, 1);
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}

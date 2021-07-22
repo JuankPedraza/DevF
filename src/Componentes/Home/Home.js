@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar/Navbar";
-import Slider from "./Slider/Slider";
 import Recomendados from "./Recomendados/Recomendados";
 import Footer from "../Footer/Footer";
 import Logo from "../../assets/logo.png";

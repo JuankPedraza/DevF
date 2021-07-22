@@ -10,12 +10,12 @@ function Footer() {
         <p class="copyright">Ecommerce DevF &copy; - 2021 - Juan Camilo</p>
         <ul class="social">
           <li>
-            <a href="">
+            <a href="/">
               <img src={Fb} alt="facebook" />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/">
               <img src={Tw} alt="twitter" />
             </a>
           </li>

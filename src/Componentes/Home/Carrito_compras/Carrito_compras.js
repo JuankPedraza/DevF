@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../../Contexts/Auth/Auth";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
-import Slider from "../Slider/Slider";
 import useEliminarCarrito from "./useEliminarCarrito";
 
 function Carrito_compras() {

@@ -67,58 +67,6 @@ function Articulo() {
       </section>
       <Footer />
     </React.Fragment>
-    // <div>
-    //   <Navbar />
-    //   <div className="center">
-    //     <section className="content-3">
-    //       <Link id="registro_link" className="content-3-regresar" to={"/articulos"}>
-    //         Regresar
-    //       </Link>
-    //       <article className="content-3-article-item2 content-3-article-article-detail2">
-    //         <div className="content-3-article-item2-image-wrap">
-    //           {productoDetalle.image != null ? (
-    //             <img
-    //               src={productoDetalle.image}
-    //               alt={productoDetalle.product_name}
-    //             />
-    //           ) : (
-    //             <img
-    //               src="https://i.ibb.co/0Jmshvb/no-image.png"
-    //               alt={productoDetalle.product_name}
-    //             />
-    //           )}
-    //         </div>
-    //         <div>
-    //           <h1 className="content-3-article-item2-subheader">{productoDetalle.product_name}</h1>
-    //           <p>{productoDetalle.description}</p>
-    //           <p>$ {productoDetalle.price}</p>
-    //           {session.isSignedIn ? (
-    //             <button className="content-3-article-item2-btn" onClick={() => {agregarCarrito(productoDetalle)}}>Comprar</button>
-    //           ) : (
-    //             <div className="content-3-article-item2-botones_auth">
-    //               <Link
-    //                 className="content-3-article-item2-btn"
-    //                 to={"/login"}
-    //               >
-    //                 Ingresar
-    //               </Link>
-    //               <Link
-    //                 className="content-3-article-item2-btn"
-    //                 to={"/registro"}
-    //               >
-    //                 Registrarse
-    //               </Link>
-    //             </div>
-    //           )}
-    //         </div>
-
-    //         <div className="clearfix"></div>
-    //       </article>
-    //     </section>
-    //   </div>
-    //   <div className="clearfix"></div>
-    //   <Footer />
-    // </div>
   );
 }
 export default Articulo;

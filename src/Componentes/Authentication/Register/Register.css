@@ -1,7 +1,7 @@
 .container-form-register {
-  background-color: rgb(233, 233, 233);
+  background-color: #080936;
   width: 400px;
-  height: 550px;
+  height: 600px;
   margin: 200px 100px 100px 800px;
   display: flex;
   flex-direction: column;
@@ -34,52 +34,70 @@
   float: left;
   margin-left: 40px;
   margin-bottom: 50px;
-}
-
-.container-form-register-button-register {
-  cursor: pointer;
-  margin-left: 46px;
-  margin-top: 5px;
-  width: 308px;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(73, 155, 234, 1);
-  font-size: 15px;
-  font-weight: bold;
   color: white;
 }
 
+.container-form-register-button-register {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  width: 280px;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.container-form-register-button-register:hover {
+  color: #222;
+  background: var(--primary);
+}
+
 .container-form-register select {
-  width: 308px;
-  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: var(--primary);
+  font-size: 1em;
+  margin-left: 60px;
   margin-bottom: 5px;
-  font-size: 15px;
-  border: 1px solid;
-  border-radius: 5px;
+  width: 280px;
 }
 
 .container-form-register input[type="text"] {
-  width: 300px;
-  height: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: #f2f2f2;
+  font-size: 1em;
+  margin-left: 60px;
   margin-bottom: 5px;
-  font-size: 15px;
-  border: 1px solid;
-  border-radius: 5px;
 }
 
 .container-form-register input[type="password"] {
-  width: 302px;
-  height: 32px;
-  margin-bottom: 5px;
-  font-size: 15px;
-  border: 1px solid;
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: #f2f2f2;
+  font-size: 1em;
+  margin-left: 60px;
 }
 
 .container-form-register-registro-link {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 1em;
   margin-top: 10px;
-  color: rgba(73, 155, 234, 1);
+  color: white;
+  margin-left: 105px;
+}
+
+.container-form-register-registro-link:hover {
+  text-decoration: underline;
 }

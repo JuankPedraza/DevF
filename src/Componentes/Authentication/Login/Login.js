@@ -62,7 +62,7 @@ function Login() {
               Ingresar con Google
             </button><br/>
             <Link
-              className="container-form-login-register-link"
+              className="container-form-login-register-link2"
               to={"/"}
             >
               Ingresar sin registrarse

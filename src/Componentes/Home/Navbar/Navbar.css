@@ -1,4 +1,4 @@
-.header {
+/* .header {
   height: 120px;
   width: 100%;
   background: white;
@@ -53,16 +53,21 @@
   color: #444;
   transition: 300ms all;
 }
+*/
 
-.header-menu a:hover {
+.site-nav a:hover {
   color: #3cb2d3;
 }
 
 .header-menu-salir {
-  color: #444;
-  font-size: 18px;
+  color: #9893d8;
+  font-size: 1em;
   font-weight: 100;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
+
+.header-menu-salir:hover {
+  color: #3cb2d3;
+} 

@@ -1,12 +1,62 @@
-.footer {
-  background: #f7f7f7;
-  width: 100%;
-  height: 70px;
-  line-height: 70px;
-  color: #444;
+footer {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #058a7e;
+  border: none;
+  opacity: 1;
 }
 
-.footer p {
-  margin: 0px;
-  padding: 0px;
+.footer-copyright p {
+  margin-left: 140px;
+  margin-top: 50px;
+  width: 190px;
+  height: 21px;
+  text-align: left;
+  font: normal normal bold 15px/18px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.footer-contactanos svg {
+  margin-left: -25px;
+  margin-top: 15px;
+  width: 44px;
+  height: 33px;
+  border: 3px solid var(--unnamed-color-058a7e);
+  fill: #ffffff;
+  opacity: 1;
+}
+
+.footer-contactanos p {
+  margin-left: -60px;
+  width: 118px;
+  height: 21px;
+  text-align: left;
+  font: normal normal bold 15px/18px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.footer-redes {
+  display: flex;
+  margin-top: 40px;
+  margin-right: 170px;
+}
+
+.footer-redes-facebook img,
+.footer-redes-twitter img,
+.footer-redes-instagram img {
+  margin-right: 8px;
+}
+
+.footer-logo-svg {
+  margin-left: -25px;
+  margin-top: 15px;
+  font-size: 32px;
+  border: 3px solid var(--unnamed-color-058a7e);
+  color: white;
+  opacity: 1;
 }

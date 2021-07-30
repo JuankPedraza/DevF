@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/Auth/Auth";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
@@ -23,48 +23,60 @@ function Articulo() {
   return (
     <React.Fragment>
       <Navbar />
-      <section id="welcome" class="grid">
-        <Link className="button" to={"/articulos"}>
-          Regresar
-        </Link>
-        <div class="welcome-text">
-          <h2>{productoDetalle.product_name}</h2>
-          <p class="leading">{productoDetalle.description}</p>
-          <p class="leading">$ {productoDetalle.price}</p>
-          {session.isSignedIn ? (
-            <button
-              className="button"
-              onClick={() => {
-                agregarCarrito(productoDetalle);
-              }}
-            >
-              Comprar
-            </button>
-          ) : (
-            <div className="content-3-article-item2-botones_auth">
-              <Link className="button" to={"/login"}>
-                Ingresar
-              </Link>
-              <Link className="button" to={"/registro"}>
-                Registrarse
-              </Link>
-            </div>
-          )}
+      <div class="contenedor">
+        <div class="contenedor-imagen">
+          <div class="contenedor-imagen-img"></div>
         </div>
-        <div class="detalle-img">
-          {productoDetalle.image != null ? (
-            <img
-              src={productoDetalle.image}
-              alt={productoDetalle.product_name}
-            />
-          ) : (
-            <img
-              src="https://i.ibb.co/0Jmshvb/no-image.png"
-              alt={productoDetalle.product_name}
-            />
-          )}
+        <div>
+          <div class="contenedor-titulo">
+            <p>{productoDetalle.product_name}</p>
+          </div>
+          <hr />
+          <div class="contenedor-descripcion">
+            <p>{productoDetalle.description}</p>
+          </div>
+          <div class="contenedor-precio">
+            <p>$ {productoDetalle.price}</p>
+          </div>
+          <div class="contenedor-botones">
+            {session.isSignedIn ? (
+              <div className="contenedor-botones-comprar">
+                <NavLink
+                  to="/articulos"
+                  activeClassName="active"
+                  class="contenedor-botones-comprar-button"
+                  onClick={() => {
+                    agregarCarrito(productoDetalle);
+                  }}
+                >
+                  Comprar
+                </NavLink>
+              </div>
+            ) : (
+              <React.Fragment>
+                <div className="contenedor-botones-login">
+                  <NavLink
+                    to="/login"
+                    activeClassName="active"
+                    class="contenedor-botones-login-button"
+                  >
+                    Login
+                  </NavLink>
+                </div>
+                <div className="contenedor-botones-registro">
+                  <NavLink
+                    to="/registro"
+                    activeClassName="active"
+                    class="contenedor-botones-registro-button"
+                  >
+                    Registro
+                  </NavLink>
+                </div>
+              </React.Fragment>
+            )}
+          </div>
         </div>
-      </section>
+      </div>
       <Footer />
     </React.Fragment>
   );

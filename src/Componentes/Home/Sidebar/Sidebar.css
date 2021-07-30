@@ -1,0 +1,75 @@
+.textos-ventajas {
+  display: flex;
+}
+
+.textos-ventajas-confiable {
+  margin-left: 150px;
+  width: 67px;
+  height: 17px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal bold 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.textos-ventajas-confiable-p {
+  margin-left: 150px;
+  width: 196px;
+  height: 42px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.textos-ventajas-seguro {
+  margin-left: 20px;
+  width: 67px;
+  height: 17px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal bold 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.textos-ventajas-seguro-p {
+  margin-left: 20px;
+  width: 280px;
+  height: 42px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.textos-ventajas-rapido {
+  margin-left: 20px;
+  width: 67px;
+  height: 17px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal bold 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.textos-ventajas-rapido-p {
+  margin-left: 20px;
+  width: 220px;
+  height: 42px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}

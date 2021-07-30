@@ -1,73 +1,253 @@
-/* .header {
-  height: 120px;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid #ccc;
-  border-top: 5px solid rgb(13, 13, 14);
-  position: fixed;
+body {
+  background-color: #f1f8ff;
+  opacity: 1;
 }
 
-.header-logo {
-  width: 30%;
-  font-size: 30px;
-  float: left;
-  margin-top: 35px;
+body::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: none; /* Ocultar scroll */
 }
 
-.header-logo img {
-  display: block;
-  float: left;
-  height: 60px;
-  margin-top: -9px;
-  margin-right: -10px;
+header {
+  display: flex;
 }
 
-.header-titulo {
-  display: block;
-  margin: 0px;
-  float: left;
+.header-logo-svg {
+  margin-top: 79px;
+  margin-left: 150px;
+  margin-right: 10px;
+  font-size: 32px;
+  border: 3px solid var(--unnamed-color-058a7e);
+  color: #058a7e;
+  opacity: 1;
 }
 
-.header-menu {
-  width: 70%;
-  float: right;
-  font-size: 18px;
+.header-logo-texto h1 {
+  margin-top: 67px;
+  width: 367px;
+  height: 56px;
+  text-align: left;
+  font: normal normal bold 40px/60px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
 }
 
-.header-menu ul {
-  line-height: 85px;
-  width: 83%;
-  float: right;
+.contacto-menu-email-svg {
+  margin-top: 90px;
+  margin-left: 630px;
+  margin-right: 5px;
+  font-size: 25px;
+  color: #058a7e;
+  opacity: 1;
 }
 
-.header-menu ul li {
-  display: inline-block;
-  list-style: none;
-  height: 46px;
-  margin-left: 15px;
-  margin-right: 15px;
+.contacto-menu-email-texto p {
+  margin-top: 88px;
+  margin-right: 50px;
+  width: 283px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
 }
 
-.header-menu a {
+.contacto-menu-telefono-svg {
+  margin-right: 5px;
+  margin-top: 90px;
+  margin-left: 11px;
+  font-size: 25px;
+  color: #058a7e;
+  opacity: 1;
+}
+
+.contacto-menu-telefono-texto p {
+  margin-top: 88px;
+  margin-right: 32px;
+  width: 283px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.menu-inicio {
+  padding-top: 88px;
+}
+
+.menu-inicio-link {
+  margin-top: 75px;
+  margin-left: 476px;
+  margin-right: 25px;
+  width: 83px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
   text-decoration: none;
-  color: #444;
-  transition: 300ms all;
-}
-*/
-
-.site-nav a:hover {
-  color: #3cb2d3;
 }
 
-.header-menu-salir {
-  color: #9893d8;
-  font-size: 1em;
-  font-weight: 100;
-  background-color: transparent;
+.menu-productos {
+  padding-top: 88px;
+}
+
+.menu-productos-link {
+  margin-top: 75px;
+  margin-right: 25px;
+  width: 110px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.menu-usuario {
+  padding-top: 88px;
+}
+
+.menu-usuario-link {
+  margin-right: 25px;
+  width: 360px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.menu-carrito {
+  padding-top: 88px;
+}
+
+.menu-carrito-link {
+  margin-top: 75px;
+  margin-right: 25px;
+  width: 110px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.menu-login {
+  margin-top: 84px;
+  margin-right: 25px;
+  padding-top: 5px;
+  width: 110px;
+  height: 35px;
+  background: #058a7e 0% 0% no-repeat padding-box;
+  border-radius: 5px;
   border: none;
+  opacity: 1;
+}
+
+.menu-login-button {
+  margin-left: 5px;
+  text-align: left;
+  font: normal normal bold 20px/21px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  padding-left: 24px;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.header-menu-salir:hover {
-  color: #3cb2d3;
-} 
+.menu-registro {
+  margin-top: 84px;
+  padding-top: 5px;
+  width: 120px;
+  height: 35px;
+  background: #058a7e 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  border: none;
+  opacity: 1;
+}
+
+.menu-registro-button {
+  margin-left: -1px;
+  text-align: left;
+  font: normal normal bold 20px/21px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  padding-left: 17px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-inicio p {
+  margin-top: 75px;
+  margin-left: 736px;
+  width: 83px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.menu-productos p {
+  margin-top: 75px;
+  margin-right: 20px;
+  width: 110px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.menu-carrito p {
+  margin-top: 75px;
+  margin-right: 20px;
+  width: 110px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.menu-usuario {
+  display: flex;
+}
+
+.menu-usuario svg {
+  margin-top: 82px;
+  margin-right: 5px;
+  left: 1629px;
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  fill: black;
+}
+
+.menu-usuario p {
+  margin-top: 75px;
+  width: 150px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}

@@ -32,7 +32,63 @@ function Listado_articulos() {
   return (
     <React.Fragment>
       <Navbar />
-      <section id="skills">
+      <div class="buscador">
+        <div class="buscador-texto">
+          <h1>Encuentra el producto que necesitas:</h1>
+        </div>
+        <div class="buscador-input">
+          <input
+            type="text"
+            name="filtro"
+            onChange={handleInputChange}
+            placeholder="Buscar ..."
+          />
+        </div>
+      </div>
+      <div class="contenedor">
+        {productoFiltrado.length > 0 ? (
+          productoFiltrado.map((product, index) => {
+            return (
+              <React.Fragment>
+                <div class="contenedor-card">
+                  <Link
+                    to={"/articulos/articulo/" + product._id}
+                    className="contenedor-link-card"
+                  >
+                    <div class="contenedor-card-img"></div>
+                    <div class="contenedor-card-titulo">
+                      <p>{product.product_name}</p>
+                    </div>
+                    <div class="contenedor-card-descripcion">
+                      <p>{product.description}</p>
+                    </div>
+                    <div class="contenedor-card-precio">
+                      <p>$ {product.price}</p>
+                    </div>
+                  </Link>
+                </div>
+              </React.Fragment>
+            );
+          })
+        ) : (
+          <div className="content-2-articles-no-productos">
+            <h1>No se encontraron productos</h1>
+          </div>
+        )}
+        {/* <div class="contenedor-card">
+          <div class="contenedor-card-img"></div>
+          <div class="contenedor-card-titulo">
+            <p>OLLA COCINA</p>
+          </div>
+          <div class="contenedor-card-descripcion">
+            <p>Olla para cocinar comida y papa</p>
+          </div>
+          <div class="contenedor-card-precio">
+            <p>$ 82.000</p>
+          </div>
+        </div> */}
+      </div>
+      {/* <section id="skills">
         <h3>Todos los Artículos</h3>
         <input
           name="filtro"
@@ -68,7 +124,7 @@ function Listado_articulos() {
             </div>
           )}
         </ul>
-      </section>
+      </section> */}
       <Footer />
     </React.Fragment>
   );

@@ -1,0 +1,249 @@
+.contenedor-carrito-titulo h1 {
+  margin-top: 95px;
+  margin-left: 810px;
+  width: 300px;
+  height: 43px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal bold 30px/35px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.contenedor-carrito-total p {
+  margin-top: -22px;
+  margin-left: 886px;
+  width: 148px;
+  height: 23px;
+  color: var(--unnamed-color-2d3332);
+  text-align: left;
+  font: normal normal normal 16px/25px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.barra-progreso-linea {
+  display: flex;
+  align-items: center;
+}
+
+.barra-progreso-linea hr {
+  margin-left: -730px;
+  margin-top: 12px;
+  width: 720px;
+  height: 10px;
+  background: #2d3332;
+  border: none;
+  opacity: 0.1;
+}
+
+.circulo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: #2d3332;
+  opacity: 0.1;
+}
+
+.barra-progreso-circulo1 {
+  margin-left: 596px;
+  background: #058a7e;
+  opacity: 1;
+}
+
+.barra-progreso-circulo2 {
+  margin-left: 320px;
+}
+
+.barra-progreso-circulo3 {
+  margin-left: 360px;
+}
+
+.barra-progreso-textos {
+  display: flex;
+  margin-left: 560px;
+  margin-bottom: 20px;
+}
+
+.barra-progreso-textos1 {
+  margin-left: 18px;
+  width: 52px;
+  height: 17px;
+  text-align: left;
+  font: normal normal normal 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.barra-progreso-textos2 {
+  margin-left: 300px;
+  width: 52px;
+  height: 17px;
+  text-align: left;
+  font: normal normal normal 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.barra-progreso-textos3 {
+  margin-left: 320px;
+  width: 52px;
+  height: 17px;
+  text-align: left;
+  font: normal normal normal 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.listado_articulos {
+  background-color: white;
+}
+
+.listado_articulos p {
+  padding-top: 40px;
+  margin-left: 416px;
+  width: 415px;
+  height: 35px;
+  text-align: left;
+  font: normal normal bold 25px/38px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.contenedor-cards2 {
+  background-color: white;
+  margin-top: -60px;
+  margin-left: 160px;
+  padding-top: 70px;
+  padding-left: 257px;
+  padding-right: 257px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contenedor-card2 {
+  margin-right: 13px;
+  margin-bottom: 40px;
+  width: 260px;
+  height: 412px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #707070 0.1;
+  border-radius: 5px;
+}
+
+.contenedor-card2-img {
+  width: 260px;
+  height: 260px;
+  background: url("../../../assets/olla.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.contenedor-card2-eliminar {
+  width: 20px;
+  height: 30px;
+  margin-left: 130px;
+  margin-top: -18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.contenedor-card2-eliminar-icono {
+  margin-top: 40px;
+  width: 25px;
+  height: 25px;
+  margin-left: 1px;
+  color: red;
+}
+
+.contenedor-card2-titulo p {
+  margin-top: -20px;
+  margin-left: 15px;
+  width: 220px;
+  height: 28px;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.contenedor-card2-precio {
+  display: flex;
+}
+
+.contenedor-card2-precio p {
+  margin-top: -10px;
+  margin-left: 15px;
+  width: 78px;
+  height: 25px;
+  text-align: left;
+  font: normal normal bold 18px/18px Poppins;
+  letter-spacing: 0px;
+  color: #2d3332;
+  opacity: 1;
+}
+
+.contenedor-carrito-botones hr {
+  width: 1078px;
+  height: 0px;
+  margin-top: 40px;
+  margin-left: 417px;
+  border: 1px solid #707070;
+  opacity: 0.2;
+}
+
+.contenedor-carrito-botones-contenedor {
+  display: flex;
+}
+
+.contenedor-carrito-botones-contenedor-volver {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 416px;
+  width: 115px;
+  height: 34px;
+  background: #fcfcfc;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  opacity: 1;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+  padding-left: 35px;
+  padding-top: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contenedor-carrito-botones-contenedor-siguiente {
+  margin-top: 30px;
+  margin-left: 766px;
+  width: 136px;
+  height: 38px;
+  background: #058a7e;
+  border-radius: 5px;
+  border: none;
+  opacity: 1;
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  padding-left: 28px;
+  padding-top: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}

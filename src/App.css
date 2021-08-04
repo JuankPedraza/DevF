@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 
 
 /* small tablet styles */
-@media screen and (min-width: 620px) {
+/* @media screen and (min-width: 620px) {
   .welcome-text {
     grid-column: 1/5;
   }
@@ -48,10 +48,10 @@ body::-webkit-scrollbar {
   footer {
     background-size: 20%;
   }
-}
+} */
 
 /* large tablet & laptop styles */
-@media screen and (min-width: 960px) {
+/* @media screen and (min-width: 960px) {
   body {
     font-size: 18px;
   }
@@ -117,10 +117,10 @@ body::-webkit-scrollbar {
     background-size: 20%;
     padding: 40px 20px;
   }
-}
+} */
 
 /* desktop styles */
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   body {
     font-size: 20px;
   }
@@ -164,4 +164,4 @@ body::-webkit-scrollbar {
   footer img {
     width: 30px;
   }
-}
+} */

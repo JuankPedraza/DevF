@@ -55,7 +55,17 @@ function Listado_articulos() {
                     to={"/articulos/articulo/" + product._id}
                     className="contenedor-link-card"
                   >
-                    <div class="contenedor-card-img"></div>
+                    {product.image != null ? (
+                      <div
+                        class="contenedor-card-img"
+                        style={{ backgroundImage: `url(${product.image})`}}
+                      ></div>
+                    ) : (
+                      <div
+                        class="contenedor-card-img"
+                        style={{ backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-y-IJN8glQlf1qoU01dEgGPUa0d1-sjfWg&usqp=CAU")` }}
+                      ></div>
+                    )}
                     <div class="contenedor-card-titulo">
                       <p>{product.product_name}</p>
                     </div>
@@ -75,18 +85,6 @@ function Listado_articulos() {
             <h1>No se encontraron productos</h1>
           </div>
         )}
-        {/* <div class="contenedor-card">
-          <div class="contenedor-card-img"></div>
-          <div class="contenedor-card-titulo">
-            <p>OLLA COCINA</p>
-          </div>
-          <div class="contenedor-card-descripcion">
-            <p>Olla para cocinar comida y papa</p>
-          </div>
-          <div class="contenedor-card-precio">
-            <p>$ 82.000</p>
-          </div>
-        </div> */}
       </div>
       {/* <section id="skills">
         <h3>Todos los Artículos</h3>

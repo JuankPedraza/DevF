@@ -60,7 +60,6 @@
 .contenedor-card-img {
   width: 260px;
   height: 260px;
-  background: url("../../../assets/olla.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px 5px 0px 0px;

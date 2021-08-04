@@ -25,7 +25,19 @@ function Articulo() {
       <Navbar />
       <div class="contenedor">
         <div class="contenedor-imagen">
-          <div class="contenedor-imagen-img"></div>
+          {productoDetalle.image != null ? (
+            <div
+              class="contenedor-imagen-img"
+              style={{ backgroundImage: `url(${productoDetalle.image})` }}
+            ></div>
+          ) : (
+            <div
+              class="contenedor-imagen-img"
+              style={{
+                backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-y-IJN8glQlf1qoU01dEgGPUa0d1-sjfWg&usqp=CAU")`,
+              }}
+            ></div>
+          )}
         </div>
         <div>
           <div class="contenedor-titulo">
@@ -65,7 +77,7 @@ function Articulo() {
                 </div>
                 <div className="contenedor-botones-registro">
                   <NavLink
-                    to="/registro"
+                    to="/login"
                     activeClassName="active"
                     class="contenedor-botones-registro-button"
                   >

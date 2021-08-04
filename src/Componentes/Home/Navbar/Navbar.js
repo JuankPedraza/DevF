@@ -117,7 +117,7 @@ function NavBar(props) {
           </div>
           <div class="menu-registro">
             <NavLink
-              to="/registro"
+              to="/login"
               activeClassName="active"
               class="menu-registro-button"
             >

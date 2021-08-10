@@ -23,16 +23,16 @@ function Articulo() {
   return (
     <React.Fragment>
       <Navbar />
-      <div class="contenedor">
-        <div class="contenedor-imagen">
+      <div className="contenedor">
+        <div className="contenedor-imagen">
           {productoDetalle.image != null ? (
             <div
-              class="contenedor-imagen-img"
+              className="contenedor-imagen-img"
               style={{ backgroundImage: `url(${productoDetalle.image})` }}
             ></div>
           ) : (
             <div
-              class="contenedor-imagen-img"
+              className="contenedor-imagen-img"
               style={{
                 backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-y-IJN8glQlf1qoU01dEgGPUa0d1-sjfWg&usqp=CAU")`,
               }}
@@ -40,23 +40,23 @@ function Articulo() {
           )}
         </div>
         <div>
-          <div class="contenedor-titulo">
+          <div className="contenedor-titulo">
             <p>{productoDetalle.product_name}</p>
           </div>
           <hr />
-          <div class="contenedor-descripcion">
+          <div className="contenedor-descripcion">
             <p>{productoDetalle.description}</p>
           </div>
-          <div class="contenedor-precio">
+          <div className="contenedor-precio">
             <p>$ {productoDetalle.price}</p>
           </div>
-          <div class="contenedor-botones">
+          <div className="contenedor-botones">
             {session.isSignedIn ? (
               <div className="contenedor-botones-comprar">
                 <NavLink
                   to="/articulos"
                   activeClassName="active"
-                  class="contenedor-botones-comprar-button"
+                  className="contenedor-botones-comprar-button"
                   onClick={() => {
                     agregarCarrito(productoDetalle);
                   }}
@@ -70,7 +70,7 @@ function Articulo() {
                   <NavLink
                     to="/login"
                     activeClassName="active"
-                    class="contenedor-botones-login-button"
+                    className="contenedor-botones-login-button"
                   >
                     Login
                   </NavLink>
@@ -79,7 +79,7 @@ function Articulo() {
                   <NavLink
                     to="/login"
                     activeClassName="active"
-                    class="contenedor-botones-registro-button"
+                    className="contenedor-botones-registro-button"
                   >
                     Registro
                   </NavLink>

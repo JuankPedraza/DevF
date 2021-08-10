@@ -25,59 +25,59 @@ function NavBar(props) {
   return (
     <React.Fragment>
       {props.home === "home" && (
-        <header class="header">
-          <div class="header-logo">{_icono_carrito}</div>
-          <div class="header-logo-texto">
+        <header className="header">
+          <div className="header-logo">{_icono_carrito}</div>
+          <div className="header-logo-texto">
             <h1>Ecommerce DevF</h1>
           </div>
-          <div class="contacto-menu-email">{_icono_mensaje}</div>
-          <div class="contacto-menu-email-texto">
+          <div className="contacto-menu-email">{_icono_mensaje}</div>
+          <div className="contacto-menu-email-texto">
             <p>info@ecommercedevf.com</p>
           </div>
-          <div class="contacto-menu-telefono">{_icono_telefono}</div>
-          <div class="contacto-menu-telefono-texto">
+          <div className="contacto-menu-telefono">{_icono_telefono}</div>
+          <div className="contacto-menu-telefono-texto">
             <p>+57 3112159454</p>
           </div>
         </header>
       )}
 
       {session.isSignedIn && props.home !== "home" && (
-        <header class="header">
-          <div class="header-logo">{_icono_carrito}</div>
-          <div class="header-logo-texto">
+        <header className="header">
+          <div className="header-logo">{_icono_carrito}</div>
+          <div className="header-logo-texto">
             <h1>Ecommerce DevF</h1>
           </div>
-          <div class="menu-inicio">
-            <NavLink to="/" activeClassName="active" class="menu-inicio-link">
+          <div className="menu-inicio">
+            <NavLink to="/" activeClassName="active" className="menu-inicio-link">
               Inicio
             </NavLink>
           </div>
-          <div class="menu-productos">
+          <div className="menu-productos">
             <NavLink
               to="/articulos"
               activeClassName="active"
-              class="menu-productos-link"
+              className="menu-productos-link"
             >
               Productos
             </NavLink>
           </div>
-          <div class="menu-carrito">
+          <div className="menu-carrito">
             <NavLink
               to="/carrito"
               activeClassName="active"
-              class="menu-carrito-link"
+              className="menu-carrito-link"
             >
               Carrito ({carrito.length})
             </NavLink>
           </div>
-          <div class="menu-usuario">
+          <div className="menu-usuario">
             {/* <svg class="lnr lnr-user">
               <use xlink:href="#lnr-user"></use>
             </svg> */}
             <NavLink
               to="/articulos"
               activeClassName="active"
-              class="menu-usuario-link"
+              className="menu-usuario-link"
               onClick={metodos.logout}
             >
               {user.displayName} - Salir
@@ -87,39 +87,39 @@ function NavBar(props) {
       )}
 
       {!session.isSignedIn && props.home !== "home" && (
-        <header class="header">
-          <div class="header-logo">{_icono_carrito}</div>
-          <div class="header-logo-texto">
+        <header className="header">
+          <div className="header-logo">{_icono_carrito}</div>
+          <div className="header-logo-texto">
             <h1>Ecommerce DevF</h1>
           </div>
-          <div class="menu-inicio">
-            <NavLink to="/" activeClassName="active" class="menu-inicio-link">
+          <div className="menu-inicio">
+            <NavLink to="/" activeClassName="active" className="menu-inicio-link">
               Inicio
             </NavLink>
           </div>
-          <div class="menu-productos">
+          <div className="menu-productos">
             <NavLink
               to="/articulos"
               activeClassName="active"
-              class="menu-productos-link"
+              className="menu-productos-link"
             >
               Productos
             </NavLink>
           </div>
-          <div class="menu-login">
+          <div className="menu-login">
             <NavLink
               to="/login"
               activeClassName="active"
-              class="menu-login-button"
+              className="menu-login-button"
             >
               Login
             </NavLink>
           </div>
-          <div class="menu-registro">
+          <div className="menu-registro">
             <NavLink
               to="/login"
               activeClassName="active"
-              class="menu-registro-button"
+              className="menu-registro-button"
             >
               Registro
             </NavLink>

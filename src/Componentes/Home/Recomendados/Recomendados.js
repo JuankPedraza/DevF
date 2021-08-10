@@ -16,7 +16,7 @@ function Recomendados() {
   }, []);
 
   return (
-    <div class="projects grid">
+    <div className="projects grid">
       {productosRecomendados !== "" ? (
         productosRecomendados.map((product, index) => {
           return (

@@ -4,7 +4,7 @@ function Tiendas() {
   return (
     <section id="skills">
       <h3>Nuestras Tiendas</h3>
-      <ul class="grid">
+      <ul className="grid">
         <li>
           <img
             src="https://eltesoro.com.co/wp-content/uploads/2020/07/dollar-city-el-tesoro-fachada.png.jpg"

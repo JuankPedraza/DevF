@@ -13,20 +13,20 @@ function Footer() {
   );
   return (
     <footer>
-      <div class="footer-copyright">
+      <div className="footer-copyright">
         <p>&copy; 2021 ECOMMERCE DEVF</p>
       </div>
-      <div class="footer-contactanos">
+      <div className="footer-contactanos">
         {_icono_carrito}
         <p>CONTACTANOS</p>
       </div>
-      <div class="footer-redes">
-        <div class="footer-redes-facebook">
+      <div className="footer-redes">
+        <div className="footer-redes-facebook">
           <a href="/">
             <img src={Fb} alt="facebook" />
           </a>
         </div>
-        <div class="footer-redes-twitter">
+        <div className="footer-redes-twitter">
           <a href="/">
             <img src={Tw} alt="twitter" />
           </a>

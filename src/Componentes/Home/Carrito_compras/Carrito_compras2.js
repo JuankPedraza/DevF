@@ -1,14 +1,17 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/Auth/Auth";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import useEliminarCarrito from "./useEliminarCarrito";
+import BarraProgreso from "./Barra_progreso/Barra_progreso";
 import "./Carrito_compras2.css";
 
 function Carrito_compras2() {
   const { carrito } = useContext(AuthContext);
   const { total } = useEliminarCarrito(carrito);
+  const { session } = useContext(AuthContext);
+  const { user } = session;
 
   const cambiaColorEf = function () {
     let botonEfectivo = document.getElementById("efectivo");
@@ -61,66 +64,70 @@ function Carrito_compras2() {
     }
   };
 
+  const enviarEmail = function () {
+    // var resultadoCompra = {};
+    // for (var i = 0; i < carrito.length; i++) {
+    //   resultadoCompra["Producto " + i] = carrito[i].product_name;
+    //   resultadoCompra["Precio_producto " + i] = carrito[i].price;
+    // }
+    // resultadoCompra.Total = "$" + total;
+    // console.log(resultadoCompra);
+
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        destinatario: user.email,
+        mensaje: "Tu compra se ha realiazado correctamente",
+      }),
+    };
+    fetch("http://localhost:3000/email", requestOptions)
+      .then((response) => response.json())
+      .then((data) => console.log(carrito));
+  };
+
   return (
     <React.Fragment>
       <Navbar />
-      <div class="contenedor-carrito">
-        <div class="contenedor-carrito-titulo">
-          <h1>Carrito de compras</h1>
-        </div>
-        <div class="contenedor-carrito-total">
-          {carrito.length > 0 && <p>Precio total: ${total}</p>}
-        </div>
-        <div class="barra-progreso">
-          <div class="barra-progreso-linea">
-            <div class="barra-progreso-circulo1 circulo" id="circulo1"></div>
-            <div class="barra-progreso-circulo2 circulo" id="circulo2"></div>
-            <div class="barra-progreso-circulo3 circulo"></div>
-            <hr />
-          </div>
-          <div class="barra-progreso-textos">
-            <p class="barra-progreso-textos1">REVISION</p>
-            <p class="barra-progreso-textos2">PAGO</p>
-            <p class="barra-progreso-textos3">RESUMEN</p>
-          </div>
-        </div>
-        <div class="listado_medios">
-          <p class="listado_medios-titulo">Pago</p>
-          <p class="listado_medios-subtitulo">
+      <div className="contenedor-carrito">
+        <BarraProgreso total={total} progreso={2} />
+        <div className="listado_medios">
+          <p className="listado_medios-titulo">Pago</p>
+          <p className="listado_medios-subtitulo">
             Selecciona el medio con el que realizaras el pago
           </p>
-          <div class="contenedor-medios">
+          <div className="contenedor-medios">
             <button
-              class="contenedor-medios-pago"
+              className="contenedor-medios-pago"
               id="efectivo"
               onClick={cambiaColorEf}
             >
-              <i class="fas fa-check" id="check1"></i>
-              <i class="fas fa-money-bill-alt"></i>
+              <i className="fas fa-check" id="check1"></i>
+              <i className="fas fa-money-bill-alt"></i>
               <p>Contra entrega</p>
             </button>
             <button
-              class="contenedor-medios-pago"
+              className="contenedor-medios-pago"
               id="tc"
               onClick={cambiaColorTc}
             >
-              <i class="fas fa-check" id="check2"></i>
-              <i class="fab fa-cc-mastercard"></i>
+              <i className="fas fa-check" id="check2"></i>
+              <i className="fab fa-cc-mastercard"></i>
               <p>Tarjeta credito</p>
             </button>
             <button
-              class="contenedor-medios-pago"
+              className="contenedor-medios-pago"
               id="td"
               onClick={cambiaColorTd}
             >
-              <i class="fas fa-check" id="check3"></i>
-              <i class="fas fa-credit-card"></i>
+              <i className="fas fa-check" id="check3"></i>
+              <i className="fas fa-credit-card"></i>
               <p>Tarjeta debito</p>
             </button>
           </div>
-          <div class="contenedor-carrito-botones">
+          <div className="contenedor-carrito-botones">
             <hr />
-            <div class="contenedor-carrito-botones-contenedor">
+            <div className="contenedor-carrito-botones-contenedor">
               <NavLink
                 to="/carrito"
                 className="contenedor-carrito-botones-contenedor-volver"
@@ -130,6 +137,7 @@ function Carrito_compras2() {
               <NavLink
                 to="/carrito-resumen"
                 className="contenedor-carrito-botones-contenedor-siguiente"
+                onClick={enviarEmail}
               >
                 SIGUIENTE
               </NavLink>

@@ -32,11 +32,11 @@ function Listado_articulos() {
   return (
     <React.Fragment>
       <Navbar />
-      <div class="buscador">
-        <div class="buscador-texto">
+      <div className="buscador">
+        <div className="buscador-texto">
           <h1>Encuentra el producto que necesitas:</h1>
         </div>
-        <div class="buscador-input">
+        <div className="buscador-input">
           <input
             type="text"
             name="filtro"
@@ -45,34 +45,36 @@ function Listado_articulos() {
           />
         </div>
       </div>
-      <div class="contenedor">
+      <div className="contenedor">
         {productoFiltrado.length > 0 ? (
           productoFiltrado.map((product, index) => {
             return (
               <React.Fragment>
-                <div class="contenedor-card">
+                <div key={index} className="contenedor-card">
                   <Link
                     to={"/articulos/articulo/" + product._id}
                     className="contenedor-link-card"
                   >
                     {product.image != null ? (
                       <div
-                        class="contenedor-card-img"
-                        style={{ backgroundImage: `url(${product.image})`}}
+                        className="contenedor-card-img"
+                        style={{ backgroundImage: `url(${product.image})` }}
                       ></div>
                     ) : (
                       <div
-                        class="contenedor-card-img"
-                        style={{ backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-y-IJN8glQlf1qoU01dEgGPUa0d1-sjfWg&usqp=CAU")` }}
+                        className="contenedor-card-img"
+                        style={{
+                          backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-y-IJN8glQlf1qoU01dEgGPUa0d1-sjfWg&usqp=CAU")`,
+                        }}
                       ></div>
                     )}
-                    <div class="contenedor-card-titulo">
+                    <div className="contenedor-card-titulo">
                       <p>{product.product_name}</p>
                     </div>
-                    <div class="contenedor-card-descripcion">
+                    <div className="contenedor-card-descripcion">
                       <p>{product.description}</p>
                     </div>
-                    <div class="contenedor-card-precio">
+                    <div className="contenedor-card-precio">
                       <p>$ {product.price}</p>
                     </div>
                   </Link>
@@ -86,43 +88,6 @@ function Listado_articulos() {
           </div>
         )}
       </div>
-      {/* <section id="skills">
-        <h3>Todos los Artículos</h3>
-        <input
-          name="filtro"
-          placeholder="Buscar articulo"
-          onChange={handleInputChange}
-          className="content-2-input_filtro"
-        />
-        <ul class="grid">
-          {productoFiltrado.length > 0 ? (
-            productoFiltrado.map((product, index) => {
-              return (
-                <React.Fragment>
-                  <li>
-                    <Link to={"/articulos/articulo/" + product._id}>
-                      {product.image != null ? (
-                        <img src={product.image} alt={product.product_name} />
-                      ) : (
-                        <img
-                          src="https://i.ibb.co/0Jmshvb/no-image.png"
-                          alt={product.product_name}
-                        />
-                      )}
-                      <h4>{product.product_name}</h4>
-                      <h4>$ {product.price}</h4>
-                    </Link>
-                  </li>
-                </React.Fragment>
-              );
-            })
-          ) : (
-            <div className="content-2-articles-no-productos">
-              <h1>No se encontraron productos</h1>
-            </div>
-          )}
-        </ul>
-      </section> */}
       <Footer />
     </React.Fragment>
   );

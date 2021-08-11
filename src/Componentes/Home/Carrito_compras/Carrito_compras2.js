@@ -64,27 +64,27 @@ function Carrito_compras2() {
     }
   };
 
-  const enviarEmail = function () {
-    // var resultadoCompra = {};
-    // for (var i = 0; i < carrito.length; i++) {
-    //   resultadoCompra["Producto " + i] = carrito[i].product_name;
-    //   resultadoCompra["Precio_producto " + i] = carrito[i].price;
-    // }
-    // resultadoCompra.Total = "$" + total;
-    // console.log(resultadoCompra);
+  // const enviarEmail = function () {
+  //   var resultadoCompra = {};
+  //   for (var i = 0; i < carrito.length; i++) {
+  //     resultadoCompra["Producto " + i] = carrito[i].product_name;
+  //     resultadoCompra["Precio_producto " + i] = carrito[i].price;
+  //   }
+  //   resultadoCompra.Total = "$" + total;
+  //   console.log(resultadoCompra);
 
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        destinatario: user.email,
-        mensaje: "Tu compra se ha realiazado correctamente",
-      }),
-    };
-    fetch("https://inspiring-wilson-c9c78d.netlify.app/.netlify/functions/server/api/email", requestOptions)
-      .then((response) => response.json())
-      .then((data) => console.log(carrito));
-  };
+  //   const requestOptions = {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       destinatario: user.email,
+  //       mensaje: "Tu compra se ha realiazado correctamente",
+  //     }),
+  //   };
+  //   fetch("https://inspiring-wilson-c9c78d.netlify.app/.netlify/functions/server/api/email", requestOptions)
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(carrito));
+  // };
 
   return (
     <React.Fragment>
@@ -137,7 +137,7 @@ function Carrito_compras2() {
               <NavLink
                 to="/carrito-resumen"
                 className="contenedor-carrito-botones-contenedor-siguiente"
-                onClick={enviarEmail}
+                // onClick={enviarEmail}
               >
                 SIGUIENTE
               </NavLink>

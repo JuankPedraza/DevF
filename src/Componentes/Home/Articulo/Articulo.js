@@ -13,10 +13,10 @@ function Articulo() {
   var { id } = useParams();
 
   useEffect(() => {
-    fetch("https://ecomerce-master.herokuapp.com/api/v1/item/" + id)
+    fetch("http://localhost:3000/api/productos/" + id)
       .then((response) => response.json())
       .then((data) => {
-        setproductoDetalle(data);
+        setproductoDetalle(data.producto);
       });
   }, [id]);
 

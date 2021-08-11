@@ -1,5 +1,5 @@
 import firebase from "firebase/app";
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { AuthContext } from "../../../Contexts/Auth/Auth";
 import { Link } from "react-router-dom";
 import "firebase/auth";
@@ -11,19 +11,29 @@ import "./Login.css";
 
 function Login() {
   const { metodos } = useContext(AuthContext);
-  const container = document.querySelector(".container");
+  // const container = document.querySelector(".container");
+  // hacer con estado con el nombre de la clase, cambiando el estado
+  const [modo, setModo] = useState(["container"]);
 
   const signupClick = () => {
-    container.classList.add("sign-up-mode");
+    setModo("container sign-up-mode");
   };
 
   const signinClick = () => {
-    container.classList.remove("sign-up-mode");
+    setModo("container");
   };
+
+  // const signupClick = () => {
+  //   container.classList.add("sign-up-mode");
+  // };
+
+  // const signinClick = () => {
+  //   container.classList.remove("sign-up-mode");
+  // };
 
   return (
     <FirebaseAuthProvider {...firebaseConfig} firebase={firebase}>
-      <div className="container">
+      <div className={modo}>
         <div className="forms-container">
           <div className="signin-signup">
             <form action="" className="sign-in-form">
@@ -37,7 +47,9 @@ function Login() {
                 <input type="password" placeholder="Contraseña" />
               </div>
               <input type="submit" value="Ingresar" className="btn solid" />
-              <p className="social-text">O ingresa con las plataformas sociales</p>
+              <p className="social-text">
+                O ingresa con las plataformas sociales
+              </p>
               <div className="social-media">
                 <Link to="#" className="social-icon">
                   <i className="fab fa-facebook-f"></i>

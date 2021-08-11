@@ -73,17 +73,17 @@ function Carrito_compras2() {
     // resultadoCompra.Total = "$" + total;
     // console.log(resultadoCompra);
 
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        destinatario: user.email,
-        mensaje: "Tu compra se ha realiazado correctamente",
-      }),
-    };
-    fetch("http://localhost:3000/email", requestOptions)
-      .then((response) => response.json())
-      .then((data) => console.log(carrito));
+    // const requestOptions = {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({
+    //     destinatario: user.email,
+    //     mensaje: "Tu compra se ha realiazado correctamente",
+    //   }),
+    // };
+    // fetch("http://localhost:3000/api/email", requestOptions)
+    //   .then((response) => response.json())
+    //   .then((data) => console.log(carrito));
   };
 
   return (

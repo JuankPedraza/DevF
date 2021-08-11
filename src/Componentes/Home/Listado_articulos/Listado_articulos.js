@@ -12,10 +12,10 @@ function Listado_articulos() {
   const { productoFiltrado } = useFiltro(productos, formState.filtro);
 
   useEffect(() => {
-    fetch("https://ecomerce-master.herokuapp.com/api/v1/item")
+    fetch("http://localhost:3000/api/productos")
       .then((response) => response.json())
       .then((data) => {
-        setProductos(data);
+        setProductos(data.productos);
       });
   }, []);
 

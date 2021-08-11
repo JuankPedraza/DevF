@@ -10,8 +10,6 @@ import "./Carrito_compras2.css";
 function Carrito_compras2() {
   const { carrito } = useContext(AuthContext);
   const { total } = useEliminarCarrito(carrito);
-  const { session } = useContext(AuthContext);
-  const { user } = session;
 
   const cambiaColorEf = function () {
     let botonEfectivo = document.getElementById("efectivo");

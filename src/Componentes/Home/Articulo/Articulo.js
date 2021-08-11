@@ -13,7 +13,7 @@ function Articulo() {
   var { id } = useParams();
 
   useEffect(() => {
-    fetch("https://inspiring-wilson-c9c78d.netlify.app/.netlify/functions/server/api/productos" + id)
+    fetch("https://inspiring-wilson-c9c78d.netlify.app/.netlify/functions/server/api/productos/" + id)
       .then((response) => response.json())
       .then((data) => {
         setproductoDetalle(data.producto);

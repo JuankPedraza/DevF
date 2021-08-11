@@ -12,7 +12,8 @@ function Listado_articulos() {
   const { productoFiltrado } = useFiltro(productos, formState.filtro);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/productos")
+    //fetch("http://localhost:3000/api/productos")
+    fetch("https://inspiring-wilson-c9c78d.netlify.app/.netlify/functions/server/api/productos")
       .then((response) => response.json())
       .then((data) => {
         setProductos(data.productos);

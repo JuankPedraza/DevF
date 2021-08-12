@@ -14,6 +14,7 @@ function Login() {
   // const container = document.querySelector(".container");
   // hacer con estado con el nombre de la clase, cambiando el estado
   const [modo, setModo] = useState(["container"]);
+  const [formState, setNewFormState] = useState();
 
   const signupClick = () => {
     setModo("container sign-up-mode");
@@ -23,13 +24,15 @@ function Login() {
     setModo("container");
   };
 
-  // const signupClick = () => {
-  //   container.classList.add("sign-up-mode");
-  // };
-
-  // const signinClick = () => {
-  //   container.classList.remove("sign-up-mode");
-  // };
+  const handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+    
+    setNewFormState((actualFormState) => {
+      return { ...actualFormState, [name]: value };
+    });
+  };
 
   return (
     <FirebaseAuthProvider {...firebaseConfig} firebase={firebase}>
@@ -40,13 +43,13 @@ function Login() {
               <h2 className="title">Iniciar sesión</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Usuario" />
+                <input type="text" placeholder="Usuario" name="email" onChange={handleInputChange}/>
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input type="password" placeholder="Contraseña" />
+                <input type="password" placeholder="Contraseña" name="password" onChange={handleInputChange}/>
               </div>
-              <input type="submit" value="Ingresar" className="btn solid" />
+              <input type="button" value="Ingresar" className="btn solid" onClick={() => metodos.signUp(formState.email, formState.password)}/>
               <p className="social-text">
                 O ingresa con las plataformas sociales
               </p>
@@ -73,17 +76,17 @@ function Login() {
               <h2 className="title">Registrarse</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Usuario" />
+                <input type="text" placeholder="Usuario" name="usuario" onChange={handleInputChange}/>
               </div>
               <div className="input-field">
                 <i className="fas fa-envelope"></i>
-                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Email" name="email" onChange={handleInputChange} />
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input type="password" placeholder="Contraseña" />
+                <input type="password" placeholder="Contraseña" name="password" onChange={handleInputChange} />
               </div>
-              <input type="submit" value="Registrarse" className="btn solid" />
+              <input type="button" value="Registrarse" className="btn solid" onClick={() => metodos.signIn(formState.email, formState.password)} />
               <p className="social-text">
                 O registrate con las plataformas sociales
               </p>

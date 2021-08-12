@@ -10,6 +10,40 @@ import { firebaseConfig } from "../../constantes";
 
 const AuthContext = React.createContext(null);
 
+const signIn = (email, password) => {
+  let emailRegistro = email;
+  let passwordRegistro = password;
+
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(emailRegistro, passwordRegistro)
+    .then((userCredential) => {
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode + " " + errorMessage);
+    });
+};
+
+const signUp = (email, password) => {
+  let emailLogin= email;
+  let passwordLogin = password;
+
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(emailLogin, passwordLogin)
+    .then((userCredential) => {
+      var user = userCredential.user;
+      console.log(user);
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode + " " + errorMessage);
+    });
+};
+
 const sessionGoogle = () => {
   const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(googleAuthProvider);
@@ -60,6 +94,8 @@ function Auth(props) {
                   providerId,
                 },
                 metodos: {
+                  signIn,
+                  signUp,
                   sessionGoogle,
                   logout,
                 },

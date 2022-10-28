@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
-import { AuthContext } from "../../../Contexts/Auth/Auth";
-import Navbar from "../Navbar/Navbar";
+import React from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import Footer from "../../Footer/Footer";
-import useEliminarCarrito from "./useEliminarCarrito";
+import Navbar from "../Navbar/Navbar";
 import BarraProgreso from "./Barra_progreso/Barra_progreso";
 import "./Carrito_compras3.css";
-import { NavLink } from "react-router-dom";
 
 function Carrito_compras3() {
-  var { carrito } = useContext(AuthContext);
+  // var { carrito } = useContext(AuthContext);
 
   // const { total } = useEliminarCarrito(carrito);
   let history = useHistory();

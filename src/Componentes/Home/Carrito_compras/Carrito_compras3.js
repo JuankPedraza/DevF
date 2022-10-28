@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 function Carrito_compras3() {
   var { carrito } = useContext(AuthContext);
 
-  const { total } = useEliminarCarrito(carrito);
+  // const { total } = useEliminarCarrito(carrito);
   let history = useHistory();
 
   function handleClick() {

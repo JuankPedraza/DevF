@@ -13,7 +13,7 @@ function Slider() {
         <p className="textos-tercero">Buy now and receive instantly</p>
       </div>
       <div className="imagen">
-        <img src="https://www.hogarmania.com/archivos/201505/razas-gatos-2xl-668x400x80xX.jpg"/>
+        <img src="https://www.hogarmania.com/archivos/201505/razas-gatos-2xl-668x400x80xX.jpg" alt=""/>
       </div>
       <div className="button-comprar-ahora">
         <Link to="/articulos" className="button-comprar-ahora-button">BUY NOW</Link>

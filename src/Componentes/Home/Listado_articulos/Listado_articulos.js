@@ -97,6 +97,7 @@ function Listado_articulos() {
 
   useEffect(() => {
     setProductos(productosData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 

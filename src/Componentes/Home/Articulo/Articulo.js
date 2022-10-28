@@ -101,6 +101,7 @@ function Articulo() {
     //   });
     const position = productosData.filter((producto) => producto.id === parseInt(id));
     setproductoDetalle(position[0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (

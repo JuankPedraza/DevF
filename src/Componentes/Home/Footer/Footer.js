@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart
 } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   const _icono_carrito = (
@@ -18,9 +19,15 @@ function Footer() {
       </div>
       <div className="footer-contactanos">
         {_icono_carrito}
-        <a href="/contactanos">
+        {/* <a href="/contactanos">
           About us
-        </a>
+        </a> */}
+        <NavLink
+          to="/contactanos"
+        // activeClassName="active"
+        >
+          About us
+        </NavLink>
       </div>
       <div className="footer-redes">
         <div className="footer-redes-facebook">

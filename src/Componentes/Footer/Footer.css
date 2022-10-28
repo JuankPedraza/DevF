@@ -10,7 +10,7 @@ footer {
 .footer-copyright p {
   margin-left: 140px;
   margin-top: 50px;
-  width: 190px;
+  width: 232PX;
   height: 21px;
   text-align: left;
   font: normal normal bold 15px/18px Poppins;
@@ -27,10 +27,12 @@ footer {
   border: 3px solid var(--unnamed-color-058a7e);
   fill: #ffffff;
   opacity: 1;
+  padding-bottom: 25px;
 }
 
-.footer-contactanos p {
-  margin-left: -60px;
+.footer-contactanos a {
+  text-decoration: none;
+  margin-left: -46px;
   width: 118px;
   height: 21px;
   text-align: left;

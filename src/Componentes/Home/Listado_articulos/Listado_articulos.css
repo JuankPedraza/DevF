@@ -94,7 +94,7 @@
 .contenedor-card-precio {
   margin-top: -10px;
   margin-left: 15px;
-  width: 78px;
+  /* width: 80px; */
   height: 25px;
   text-align: left;
   font: normal normal bold 18px/18px Poppins;

@@ -5,21 +5,21 @@ function Sidebar() {
   return (
     <div className="textos-ventajas">
       <div>
-        <p className="textos-ventajas-confiable">CONFIABLE</p>
+        <p className="textos-ventajas-confiable">TRUSTWORTHY</p>
         <p className="textos-ventajas-confiable-p">
-          Realiza tus compras con tranquilidad.
+          Make your purchases with peace of mind.
         </p>
       </div>
       <div>
-        <p className="textos-ventajas-seguro">SEGURO</p>
+        <p className="textos-ventajas-seguro">SAFE</p>
         <p className="textos-ventajas-seguro-p">
-          Compra y no te preocupes. Nosotros nos encargamos del resto.
+          Buy and don't worry. We willl take care of the rest.
         </p>
       </div>
       <div>
-        <p className="textos-ventajas-rapido">RAPIDO</p>
+        <p className="textos-ventajas-rapido">FAST</p>
         <p className="textos-ventajas-rapido-p">
-          Compra tus productos y recibe al instante.
+          Buy your products and receive instantly.
         </p>
       </div>
     </div>

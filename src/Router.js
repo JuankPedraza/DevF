@@ -7,6 +7,7 @@ import Listado_articulos from "./Componentes/Home/Listado_articulos/Listado_arti
 import Carrito_compras from "./Componentes/Home/Carrito_compras/Carrito_compras";
 import Carrito_compras2 from "./Componentes/Home/Carrito_compras/Carrito_compras2";
 import Carrito_compras3 from "./Componentes/Home/Carrito_compras/Carrito_compras3";
+import Contacto from "./Componentes/Home/Contacto/Contato";
 
 function Router() {
   return (
@@ -19,6 +20,7 @@ function Router() {
         <Route exact path="/carrito" component={Carrito_compras} />
         <Route exact path="/carrito-paso2" component={Carrito_compras2} />
         <Route exact path="/carrito-resumen" component={Carrito_compras3} />
+        <Route exact path="/contactanos" component={Contacto} />
         {/* <Route component={Error} /> */}
       </Switch>
     </BrowserRouter>

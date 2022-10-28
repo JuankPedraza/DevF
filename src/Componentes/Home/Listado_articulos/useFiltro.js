@@ -5,7 +5,7 @@ function useFiltro(productos = [], terminoBusqueda) {
   useEffect(() => {
     if (productos.length !== 0) {
       const filtrados = productos.filter((producto) =>
-        producto.product_name.includes(terminoBusqueda)
+        producto.title.includes(terminoBusqueda)
       );
 
       setproductoFiltrado(filtrados);

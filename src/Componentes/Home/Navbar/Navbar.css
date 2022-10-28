@@ -1,5 +1,5 @@
 body {
-  background-color: #f1f8ff;
+  background-color: white;
   opacity: 1;
 }
 
@@ -25,7 +25,7 @@ header {
 
 .header-logo-texto h1 {
   margin-top: 67px;
-  width: 367px;
+  width: 458px;
   height: 56px;
   text-align: left;
   font: normal normal bold 40px/60px Poppins;

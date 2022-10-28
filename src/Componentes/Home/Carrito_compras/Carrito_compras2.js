@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/Auth/Auth";
+import { useHistory } from "react-router-dom";
+import Modal from "react-modal";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import useEliminarCarrito from "./useEliminarCarrito";
@@ -10,6 +13,40 @@ import "./Carrito_compras2.css";
 function Carrito_compras2() {
   const { carrito } = useContext(AuthContext);
   const { total } = useEliminarCarrito(carrito);
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    subtitle.style.color = "#058a7e";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  Modal.setAppElement(document.getElementById("modal"));
+
+  var total2 = total.toString();
+  let history = useHistory();
+
+  function resumenClick() {
+    history.push("/carrito-resumen");
+  }
 
   const cambiaColorEf = function () {
     let botonEfectivo = document.getElementById("efectivo");
@@ -87,12 +124,49 @@ function Carrito_compras2() {
   return (
     <React.Fragment>
       <Navbar />
+      <div id="modal">
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>
+            Make your payments quickly and safely with
+          </h2>
+          <PayPalScriptProvider options={{ "client-id": "test" }}>
+            <PayPalButtons
+              createOrder={(data, actions) => {
+                return actions.order.create({
+                  purchase_units: [
+                    {
+                      amount: {
+                        currency_code: "USD",
+                        value: total2,
+                      },
+                    },
+                  ],
+                });
+              }}
+              onApprove={(data, actions) => {
+                // Capture the funds from the transaction
+                return actions.order.capture().then(function (details) {
+                  // Show a success message to your buyer
+                  //alert("Transaction completed by " + details.payer.name.given_name);
+                  resumenClick();
+                });
+              }}
+            />
+          </PayPalScriptProvider>
+        </Modal>
+      </div>
       <div className="contenedor-carrito">
-        <BarraProgreso total={total} progreso={2} />
+        <BarraProgreso total='125000' progreso={2} />
         <div className="listado_medios">
-          <p className="listado_medios-titulo">Pago</p>
+          <p className="listado_medios-titulo">Payment</p>
           <p className="listado_medios-subtitulo">
-            Selecciona el medio con el que realizaras el pago
+            Select the means with which you will make the payment
           </p>
           <div className="contenedor-medios">
             <button
@@ -102,7 +176,7 @@ function Carrito_compras2() {
             >
               <i className="fas fa-check" id="check1"></i>
               <i className="fas fa-money-bill-alt"></i>
-              <p>Contra entrega</p>
+              <p>Upon delivery</p>
             </button>
             <button
               className="contenedor-medios-pago"
@@ -111,7 +185,7 @@ function Carrito_compras2() {
             >
               <i className="fas fa-check" id="check2"></i>
               <i className="fab fa-cc-mastercard"></i>
-              <p>Tarjeta credito</p>
+              <p>Credit card</p>
             </button>
             <button
               className="contenedor-medios-pago"
@@ -120,9 +194,19 @@ function Carrito_compras2() {
             >
               <i className="fas fa-check" id="check3"></i>
               <i className="fas fa-credit-card"></i>
-              <p>Tarjeta debito</p>
+              <p>Debit card</p>
             </button>
           </div>
+          <div className="contenedor-carrito-paypal">
+            <p>Or pay with</p>
+            <button
+              onClick={openModal}
+              className="contenedor-carrito-paypal-btn"
+            >
+              <p>PayPal</p>
+            </button>
+          </div>
+
           <div className="contenedor-carrito-botones">
             <hr />
             <div className="contenedor-carrito-botones-contenedor">
@@ -130,14 +214,14 @@ function Carrito_compras2() {
                 to="/carrito"
                 className="contenedor-carrito-botones-contenedor-volver"
               >
-                VOLVER
+                RETURN
               </NavLink>
               <NavLink
                 to="/carrito-resumen"
                 className="contenedor-carrito-botones-contenedor-siguiente"
-                // onClick={enviarEmail}
+              // onClick={enviarEmail}
               >
-                SIGUIENTE
+                NEXT
               </NavLink>
             </div>
           </div>

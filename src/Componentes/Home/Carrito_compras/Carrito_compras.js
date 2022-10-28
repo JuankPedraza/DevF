@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../../../Contexts/Auth/Auth";
+import { CarritoContext } from "../../../Contexts/Carrito/Carrito";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import useEliminarCarrito from "./useEliminarCarrito";
@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 import BarraProgreso from "./Barra_progreso/Barra_progreso";
 
 function Carrito_compras() {
-  const { carrito, quitarCarrito } = useContext(AuthContext);
+  const { carrito, quitarCarrito } = useContext(CarritoContext);
   const { total } = useEliminarCarrito(carrito);
   const _icono_eliminar = (
     <FontAwesomeIcon
@@ -24,7 +24,7 @@ function Carrito_compras() {
       <div className="contenedor-carrito">
         <BarraProgreso total={total} progreso={1} />
         <div className="listado_articulos">
-          <p>Artículos seleccionados:</p>
+          <p>Selected Articles:</p>
           <div className="contenedor-cards2">
             <React.Fragment>
               {carrito.length > 0 ? (
@@ -34,10 +34,10 @@ function Carrito_compras() {
                       <div className="contenedor-card2">
                         <div
                           className="contenedor-card2-img"
-                          style={{ backgroundImage: `url(${product.image})` }}
+                          style={{ backgroundImage: `url(${product.urlImage})` }}
                         ></div>
                         <div className="contenedor-card2-titulo">
-                          <p>{product.product_name}</p>
+                          <p>{product.title}</p>
                         </div>
                         <div className="contenedor-card2-precio">
                           <p>$ {product.price}</p>
@@ -56,7 +56,7 @@ function Carrito_compras() {
                 })
               ) : (
                 <div className="content-2-articles-no-productos-carrito">
-                  <h1>No se encontraron productos</h1>
+                  <h1>No products found</h1>
                 </div>
               )}
             </React.Fragment>
@@ -68,13 +68,13 @@ function Carrito_compras() {
                 to="/articulos"
                 className="contenedor-carrito-botones-contenedor-volver"
               >
-                VOLVER
+                RETURN
               </NavLink>
               <NavLink
                 to="/carrito-paso2"
                 className="contenedor-carrito-botones-contenedor-siguiente"
               >
-                SIGUIENTE
+                NEXT
               </NavLink>
             </div>
           </div>

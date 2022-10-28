@@ -2,7 +2,7 @@
   margin-top: 190px;
   margin-left: 150px;
   margin-bottom: -5px;
-  width: 361px;
+  width: 420px;
   height: 28px;
   color: var(--unnamed-color-2d3332);
   text-align: left;
@@ -56,7 +56,7 @@
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
-  padding-left: 70px;
+  padding-left: 100px;
   cursor: pointer;
 }
 
@@ -74,8 +74,8 @@ hr {
   margin-left: 968px;
   width: 910px;
   height: 665px;
-  background: url("../../../assets/logo.png");
+  /* background: url("https://4.bp.blogspot.com/_9RS5MCWlr9U/S-acTOXD1RI/AAAAAAAABFU/JogerYun7Kk/s1600/257279-143795_p.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   opacity: 1;
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/Auth/Auth";
+import { CarritoContext } from "../../../Contexts/Carrito/Carrito";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
@@ -10,7 +11,8 @@ import {
 import "./Navbar.css";
 
 function NavBar(props) {
-  const { session, metodos, carrito } = useContext(AuthContext);
+  const { session, metodos } = useContext(AuthContext);
+  const { carrito }  = useContext(CarritoContext);
   const { user } = session;
   const _icono_carrito = (
     <FontAwesomeIcon className="header-logo-svg" icon={faShoppingCart} />
@@ -28,15 +30,15 @@ function NavBar(props) {
         <header className="header">
           <div className="header-logo">{_icono_carrito}</div>
           <div className="header-logo-texto">
-            <h1>Ecommerce DevF</h1>
+            <h1>Ecommerce Cat's Land</h1>
           </div>
           <div className="contacto-menu-email">{_icono_mensaje}</div>
           <div className="contacto-menu-email-texto">
-            <p>info@ecommercedevf.com</p>
+            <p>info@ecommercecatsland.com</p>
           </div>
           <div className="contacto-menu-telefono">{_icono_telefono}</div>
           <div className="contacto-menu-telefono-texto">
-            <p>+57 3112159454</p>
+            <p>+57 3215005100</p>
           </div>
         </header>
       )}
@@ -45,11 +47,11 @@ function NavBar(props) {
         <header className="header">
           <div className="header-logo">{_icono_carrito}</div>
           <div className="header-logo-texto">
-            <h1>Ecommerce DevF</h1>
+            <h1>Ecommerce Cat's Land</h1>
           </div>
           <div className="menu-inicio">
             <NavLink to="/" activeClassName="active" className="menu-inicio-link">
-              Inicio
+              Home
             </NavLink>
           </div>
           <div className="menu-productos">
@@ -58,7 +60,7 @@ function NavBar(props) {
               activeClassName="active"
               className="menu-productos-link"
             >
-              Productos
+              Products
             </NavLink>
           </div>
           <div className="menu-carrito">
@@ -67,7 +69,7 @@ function NavBar(props) {
               activeClassName="active"
               className="menu-carrito-link"
             >
-              Carrito ({carrito.length})
+              Cart ({carrito.length})
             </NavLink>
           </div>
           <div className="menu-usuario">
@@ -80,7 +82,7 @@ function NavBar(props) {
               className="menu-usuario-link"
               onClick={metodos.logout}
             >
-              {user.displayName} - Salir
+              {user.displayName} - Log out
             </NavLink>
           </div>
         </header>
@@ -90,11 +92,11 @@ function NavBar(props) {
         <header className="header">
           <div className="header-logo">{_icono_carrito}</div>
           <div className="header-logo-texto">
-            <h1>Ecommerce DevF</h1>
+            <h1>Ecommerce Cat's Land</h1>
           </div>
           <div className="menu-inicio">
             <NavLink to="/" activeClassName="active" className="menu-inicio-link">
-              Inicio
+              Home
             </NavLink>
           </div>
           <div className="menu-productos">
@@ -103,7 +105,7 @@ function NavBar(props) {
               activeClassName="active"
               className="menu-productos-link"
             >
-              Productos
+              Products
             </NavLink>
           </div>
           <div className="menu-login">
@@ -112,7 +114,7 @@ function NavBar(props) {
               activeClassName="active"
               className="menu-login-button"
             >
-              Login
+              Sign in
             </NavLink>
           </div>
           <div className="menu-registro">
@@ -121,7 +123,7 @@ function NavBar(props) {
               activeClassName="active"
               className="menu-registro-button"
             >
-              Registro
+              Sign up
             </NavLink>
           </div>
         </header>

@@ -14,11 +14,13 @@ function Footer() {
   return (
     <footer>
       <div className="footer-copyright">
-        <p>&copy; 2021 ECOMMERCE DEVF</p>
+        <p>&copy; 2022 ECOMMERCE CAT'S LAND</p>
       </div>
       <div className="footer-contactanos">
         {_icono_carrito}
-        <p>CONTACTANOS</p>
+        <a href="/contactanos">
+          About us
+        </a>
       </div>
       <div className="footer-redes">
         <div className="footer-redes-facebook">

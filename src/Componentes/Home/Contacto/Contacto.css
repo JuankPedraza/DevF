@@ -1,0 +1,96 @@
+.contenedor-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.contenedor-uno {
+    width: 900px;
+}
+
+.contenedor-uno h1 {
+    text-align: center;
+    color: #058a7e;
+    font-size: 50px;
+}
+
+.contenedor-uno p {
+    text-align: center;
+}
+
+.contenedor-dos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.contenedor-dos h1 {
+    text-align: left;
+    color: #058a7e;
+    font-size: 50px;
+}
+
+.contenedor-dos p {
+    text-align: left;
+}
+
+.contenedor-dos button {
+    background: #058a7e;
+    color: white;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-dos img {
+    width: 333px;
+    height: 260px;
+    padding-top: 47px;
+    border-radius: 20px;
+}
+
+.main {
+    width: 1000px;
+}
+
+.contenedor-tres {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.contenedor-tres h1 {
+    text-align: right;
+    color: #058a7e;
+    font-size: 50px;
+}
+
+.contenedor-tres p {
+    text-align: right;
+}
+
+.contenedor-tres button {
+    background: #058a7e;
+    color: white;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 516px;
+    cursor: pointer;
+}
+
+.contenedor-tres img {
+    width: 419px;
+    height: 260px;
+    padding-top: 47px;
+}
+
+.social {
+    margin-left: -82px;
+}

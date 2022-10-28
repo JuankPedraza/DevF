@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../../../../Contexts/Auth/Auth";
+import { CarritoContext } from "../../../../Contexts/Carrito/Carrito";
 import "./Barra_progreso.css";
 
 function BarraProgreso(props) {
-  const { carrito } = useContext(AuthContext);
+  const { carrito } = useContext(CarritoContext);
 
   return (
     <div className="contenedor-carrito">
       <div className="contenedor-carrito-titulo">
-        <h1>Carrito de compras</h1>
+        <h1>Shopping Cart</h1>
       </div>
       <div className="contenedor-carrito-total">
         {carrito.length > 0 && <p>Precio total: ${props.total} </p>}
@@ -40,9 +40,9 @@ function BarraProgreso(props) {
           <hr />
         </div>
         <div className="barra-progreso-textos">
-          <p className="barra-progreso-textos1">REVISION</p>
-          <p className="barra-progreso-textos2">PAGO</p>
-          <p className="barra-progreso-textos3">RESUMEN</p>
+          <p className="barra-progreso-textos1">REVIEW</p>
+          <p className="barra-progreso-textos2">PAYMENT</p>
+          <p className="barra-progreso-textos3">RESUME</p>
         </div>
       </div>
     </div>

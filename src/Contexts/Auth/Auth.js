@@ -1,6 +1,5 @@
 import firebase from "firebase/app";
-import React, { useState } from "react";
-import swal from "sweetalert";
+import React from "react";
 import "firebase/auth";
 import {
   FirebaseAuthProvider,
@@ -17,8 +16,7 @@ const signIn = (email, password) => {
   firebase
     .auth()
     .createUserWithEmailAndPassword(emailRegistro, passwordRegistro)
-    .then((userCredential) => {
-    })
+    .then((userCredential) => {})
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -27,7 +25,7 @@ const signIn = (email, password) => {
 };
 
 const signUp = (email, password) => {
-  let emailLogin= email;
+  let emailLogin = email;
   let passwordLogin = password;
 
   firebase
@@ -59,28 +57,6 @@ const logout = () => {
 };
 
 function Auth(props) {
-  const [carrito, setCarrito] = useState([]);
-
-  const agregarCarrito = (producto) => {
-    setCarrito((prevState) => [...prevState, producto]);
-    swal({
-      title: "Agregado!",
-      text: "Producto agregado correctamente",
-      icon: "success",
-    });
-  };
-
-  const quitarCarrito = (productoEleminado) => {
-    setCarrito((prevState) =>
-      prevState.filter((producto) => producto._id !== productoEleminado._id)
-    );
-    swal({
-      title: "Eliminado!",
-      text: "Producto eliminado correctamente",
-      icon: "success",
-    });
-  };
-
   return (
     <FirebaseAuthProvider {...firebaseConfig} firebase={firebase}>
       <FirebaseAuthConsumer>
@@ -99,9 +75,6 @@ function Auth(props) {
                   sessionGoogle,
                   logout,
                 },
-                carrito: carrito,
-                agregarCarrito,
-                quitarCarrito,
               }}
             >
               {props.children}

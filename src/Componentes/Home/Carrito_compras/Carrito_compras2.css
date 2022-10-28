@@ -17,7 +17,7 @@
 .listado_medios-subtitulo {
   margin-top: -20px;
   margin-left: 416px;
-  width: 496px;
+  width: 556px;
   height: 28px;
   color: var(--unnamed-color-2d3332);
   text-align: left;
@@ -105,7 +105,7 @@
 .listado_medios-subtitulo {
   margin-top: -20px;
   margin-left: 416px;
-  width: 496px;
+  width: 556px;
   height: 28px;
   color: var(--unnamed-color-2d3332);
   text-align: left;
@@ -154,4 +154,36 @@
   padding-top: 5px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.contenedor-carrito-paypal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-carrito-paypal p {
+  margin-right: 5px;
+}
+
+.contenedor-carrito-paypal-btn {
+  height: 30px;
+  background: transparent;
+  border: none;
+}
+
+.contenedor-carrito-paypal-btn p {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-top: 2px;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+.contenedor-carrito-paypal-btn p:hover {
+  text-decoration: underline;
 }

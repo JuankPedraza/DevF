@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import Fb from "../../assets/icon_fb.svg";
-import Tw from "../../assets/icon_tw.svg";
+import Fb from "../../../assets/icon_fb.svg";
+import Tw from "../../../assets/icon_tw.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart

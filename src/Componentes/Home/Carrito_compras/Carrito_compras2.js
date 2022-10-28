@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import Modal from "react-modal";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../../Footer/Footer";
+import Footer from "../Footer/Footer";
 import useEliminarCarrito from "./useEliminarCarrito";
 import BarraProgreso from "./Barra_progreso/Barra_progreso";
 import "./Carrito_compras2.css";

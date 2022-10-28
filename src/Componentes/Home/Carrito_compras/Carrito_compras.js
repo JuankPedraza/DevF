@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CarritoContext } from "../../../Contexts/Carrito/Carrito";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../../Footer/Footer";
+import Footer from "../Footer/Footer";
 import useEliminarCarrito from "./useEliminarCarrito";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";

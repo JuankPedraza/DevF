@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/Auth/Auth";
 import { CarritoContext } from "../../../Contexts/Carrito/Carrito";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../../Footer/Footer";
+import Footer from "../Footer/Footer";
 import "./Articulo.css";
 
 function Articulo() {

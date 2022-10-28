@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import Footer from "../../Footer/Footer";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import BarraProgreso from "./Barra_progreso/Barra_progreso";
 import "./Carrito_compras3.css";

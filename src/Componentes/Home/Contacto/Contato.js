@@ -1,6 +1,6 @@
 import React from "react";
 import './Contacto.css';
-import Footer from "../../Footer/Footer";
+import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/Navbar";
 
 function Contacto() {
